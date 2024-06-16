@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create book</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <header><h1>Create Book</h1></header>
+    
+    <form action="/create_book" method="post">
+        <label for="title">Title:</label>
+        <input type="text" name="title" required><br>
+
+        <label for="author">Author:</label>
+        <input type="text" name="author" required><br>
+
+        <label for="publication_year">Publication Year:</label>
+        <input type="number" name="publication_year" required><br>
+
+        <input type="submit" value="Create">
+    </form>
+    <a href="/admindashboard">Back to Dashboard</a>
+    </form>
+    <footer>
+      <p>© GROUP F6 App 2024</p>
+    </footer>
+  </body>
+</html>

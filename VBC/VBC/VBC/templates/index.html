@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In / Sign Up</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <header><h1>Welcome To Group F6 Project</h1></header>
+    <div class="container">
+      <div class="form-container">
+        <form id="signin-form" action="/signin" method="post">
+          <h2>Sign In</h2>
+          <div class="form-group">
+            <label for="signin-email">Email:</label>
+            <input type="text" id="signin-email" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="signin-password">Password:</label>
+            <input
+              type="password"
+              id="signin-password"
+              name="password"
+              
+            />
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+
+        <form id="signup-form" action="/signup" method="post">
+          <h2>Sign Up</h2>
+          <div class="form-group">
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password:</label>
+            <input
+              type="password"
+              id="signup-password"
+              name="password"
+              required
+            />
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+
+      </div>
+    </div>
+    <footer>
+      <p>© GROUP F6 App 2024</p>
+    </footer>
+  </body>
+</html>
+
